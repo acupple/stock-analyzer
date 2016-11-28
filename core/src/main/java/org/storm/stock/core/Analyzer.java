@@ -18,7 +18,8 @@ public class Analyzer {
     private SellPolicy sellPolicy;
 
     private Stat stat;
-    private Account account;
+
+    private StockContext context;
 
     public void setBuyPolicy(BuyPolicy buyPolicy) {
         this.buyPolicy = buyPolicy;
@@ -32,8 +33,11 @@ public class Analyzer {
         this.sellPolicy = sellPolicy;
     }
 
+    //TODO: 执行回归测试流程
     public void Run() {
         //TODO: 获取所有股票代码
         Map<String, String> allStocks = new HashMap<>();
+
+        //TODO: 根据select policy挑选候选股票
     }
 }

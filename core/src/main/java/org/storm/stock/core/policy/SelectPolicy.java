@@ -1,8 +1,10 @@
 package org.storm.stock.core.policy;
 
+import org.storm.stock.core.StockContext;
+
 /**
  * Created by yuanwangcheng on 16/11/21.
  */
-public abstract class SelectPolicy extends Policy {
-    public abstract boolean Select();
+public interface SelectPolicy  {
+    boolean Select(StockContext ctx);
 }

@@ -1,6 +1,7 @@
 package org.storm.stock.core.providers;
 
 import org.storm.stock.core.models.KData;
+import org.storm.stock.core.models.MarketValue;
 import org.storm.stock.core.models.Stock;
 import org.storm.stock.core.models.enums.Average;
 import org.storm.stock.core.models.enums.Peak;
@@ -17,18 +18,16 @@ public class StockProvider {
 
     private Stock stock;
 
-    public StockProvider(String code){
-        this.stock = new Stock();
-        this.stock.setId(code);
+    public StockProvider(Stock stock){
+        this.stock = stock;
     }
 
-    //TODO: 加载股票数据
-    public void Load() throws Exception{
-
-    }
-
-    public Stock getStock() {
-        return stock;
+    /**
+     * 获取市值信息
+     * @return
+     */
+    public MarketValue getMarketValue() {
+        return null;
     }
 
     /**
@@ -66,6 +65,12 @@ public class StockProvider {
         return null;
     }
 
+    /**
+     * 获取一段时间的日K数据
+     * @param start
+     * @param end
+     * @return
+     */
     public List<KData> getDayKData(Date start, Date end){
         return null;
     }
